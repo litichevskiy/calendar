@@ -1,0 +1,31 @@
+ul {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    box-shadow: 0 0 10px #d0d0d0;
+    padding:0;
+    font-size: large;
+    font-family: Helvetica;
+}
+li {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+/*    box-shadow: 0.1px 0.1px 3px 0px silver;*/
+    float: left;
+}
+li:nth-child(7n+1) {
+    clear: both;
+}
+li:nth-child(7n+7) {
+    border-right: 1px solid transparent;
+}
+li.start ~ li {
+    background-color: #DCDCDC;
+}
+li.finish ~ li {
+    background-color: transparent;
+}
