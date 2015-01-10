@@ -1,30 +1,36 @@
 ul {
+    display:table;
+    margin: 5em;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    box-shadow: 0 0 10px #d0d0d0;
-    padding:0;
-    font-size: xx-large;
-    font-family: Helvetica;
+    padding: 0;
+    box-shadow: 0px 0px 10px 1px silver;
 }
 li {
     display: inline-block;
     width: 2em;
     height: 2em;
-    border-right: 1px solid silver;
     border-bottom: 1px solid silver;
+    border-right: 1px solid silver;
     text-align: center;
+    line-height: 2em;
+    font-size: large;
     float: left;
 }
 li:nth-child(7n+1) {
     clear: both;
 }
 li:nth-child(7n+7) {
-    border-right: 1px solid transparent;
+    border-right:none;
 }
-li.start ~ li {
-    background-color: red;
+li:nth-child(1n+36) {
+    border-bottom:none;
 }
-li.finish ~ li {
-    background-color: transparent;
+li:nth-child(-n+7) {
+    color: gray;
+}
+li.select ~ li {
+    background-color:  #f0f0f0;
+}
+li.select ~ li.select ~ li {
+    background-color:  transparent;
 }
